@@ -58,7 +58,8 @@ jobs:
         port: ${{ secrets.OWNPORT }}
         
         # script à exécuter
-        script: |        
+        script: |
+          cd k8s        
           kubectl apply -f 1-postgres-pv.yaml
           kubectl apply -f 2-postgres-pvc.yaml
           kubectl apply -f 3-postgres-config.yaml
