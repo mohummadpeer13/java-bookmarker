@@ -22,3 +22,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+bookmarker-api/.vscode/
+bookmarker-api/target/
+bookmarker-ui/.vscode/
+bookmarker-ui/node_modules/
+bookmarker-ui/.next/
+bookmarker-ui/build

@@ -1,0 +1,16 @@
+POST http://localhost:8080/api/bookmarks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "An Intro to Spring HATEOAS",
+    "url": "https://www.baeldung.com/spring-hateoas-tutorial",
+    "description": "This article explains the process of creating hypermedia-driven REST web service using the Spring HATEOAS project."
+}
+
+#######
+
+GET http://localhost:8080/api/bookmarks HTTP/1.1
+
+#######
+
+GET http://localhost:8080/api/bookmarks?query=docker HTTP/1.1
