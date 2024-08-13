@@ -35,11 +35,11 @@ KVM (Kernel-based Virtual Machine) is an open-source virtualization technology b
 - Vm ip        : 192.168.1.100
 - Vm ssh port  : 4100
 
-## After create Vm :
+## After create Vm.
 - 1/ Install docker
 - 2/ Install Kind
 - 3/ Install Kubectl
 
-- 4/ tranfert folder k8s and kind on the VM.
-- 5/ create kubernetes cluster with kind => run script ./create-cluster.sh
+- 4/ Tranfert folder k8s and kind on the VM.
+- 5/ Create kubernetes cluster with kind => run script ./create-cluster.sh
 
