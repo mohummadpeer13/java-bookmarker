@@ -59,6 +59,7 @@ jobs:
         port: ${{ secrets.OWNPORT }}
         
         # script à exécuter
-        script: |        
+        script: |
+          cd k8s        
           kubectl apply -f 7-bookmarker-ui.yaml
           kubectl apply -f 9-ingress-ui.yaml
