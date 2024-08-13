@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+ 
+  bookmarker-api:
+    build:
+      context: ../bookmarker-api/
+      dockerfile: Dockerfile
+    image: rogerranium/bookmarker-api
+    container_name: bookmarker-api
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_db:${POSTGRES_CONTAINER_PORT}/${POSTGRES_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - ${API_LOCAL_PORT}:${API_CONTAINER_PORT}
+    restart: always
+    depends_on:
+      - postgres_db
+      
+  bookmarker-ui-nextjs:
+    build:
+      context: ../bookmarker-ui/
+      dockerfile: Dockerfile
+    image: rogerranium/bookmarker-ui
+    container_name: bookmarker-ui
+    ports:
+      - ${UI_LOCAL_PORT}:${UI_CONTAINER_PORT}
