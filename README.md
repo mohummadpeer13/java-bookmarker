@@ -26,7 +26,7 @@ Kubernetes is an open-source platform designed to automate the deployment, scali
 KVM (Kernel-based Virtual Machine) is an open-source virtualization technology built into the Linux kernel. It allows a Linux system to act as a hypervisor, enabling it to run multiple virtual machines (VMs) on a single physical host. Each VM operates like a separate computer, complete with its own operating system and hardware resources.
 
 # Deployment Kubernetes
-- The project is hosted on my own server with KVM hypervisor.
+## The project is hosted on my own server with KVM hypervisor.
 - Configuration: i7 2.9 ghz / 32 GB RAM / 1TB SSD
 
 - Vm name      : bookmarker-cluster
@@ -35,7 +35,7 @@ KVM (Kernel-based Virtual Machine) is an open-source virtualization technology b
 - Vm ip        : 192.168.1.100
 - Vm ssh port  : 4100
 
-- After create Vm :
+## After create Vm :
 - 1/ Install docker
 - 2/ Install Kind
 - 3/ Install Kubectl
